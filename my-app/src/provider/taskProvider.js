@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import taskContext from './taskContext';
 
 function TaskProvider({ children }) {
-  const [tasks, setTasks] = useState();
+  const [tasks, setTasks] = useState('isso eh um teste');
 
   const context = {
     tasks,

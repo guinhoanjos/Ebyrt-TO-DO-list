@@ -1,3 +1,6 @@
+import { useContext } from 'react';
+import taskContext from '../provider/taskContext';
+
 function TaskInput() {
   return (
     <>
