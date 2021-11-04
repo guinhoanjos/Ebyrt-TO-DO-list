@@ -8,7 +8,9 @@ function TaskTable() {
     <table>
       <thead>
         <th>Tarefa</th>
-        <th>data</th>
+        <th>Status</th>
+        <th>Data</th>
+        <th>Excluir</th>
       </thead>
       {
         tasks ? <BodyTable /> : null
