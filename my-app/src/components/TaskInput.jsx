@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import taskContext from '../provider/taskContext';
 
 const INITIAL_STATE = { text: '', date: '', 'select-one': 'Pendente' };

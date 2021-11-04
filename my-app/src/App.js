@@ -1,17 +1,22 @@
-import './App.css';
-import TaskInput from './components/TaskInput';
-import TaskTable from './components/TaskTable';
-import TaskProvider from './provider/taskProvider';
+import React from 'react';
+
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import Home from './pages/home';
+import EditPage from './pages/editPage';
 
 function App() {
   return (
-    <div>
-      <h1>to do list</h1>
-      <TaskProvider>
-        <TaskInput />
-        <TaskTable />
-      </TaskProvider>
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/edit" element={<EditPage />} />
+      </Routes>
+    </Router>
+
   );
 }
 
