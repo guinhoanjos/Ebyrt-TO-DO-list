@@ -5,15 +5,15 @@ function TaskInput() {
   const { tasks, setTasks } = useContext(taskContext);
   const [state, setState] = useState();
 
-  async function ChangeState(event) {
+  function ChangeState(event) {
     const { type, value } = event.target;
-    await setState({ ...state, [type]: value });
+    setState({ ...state, [type]: value });
     console.log(event.target.type);
     console.log(state);
   }
   function ChangeContext() {
-    setTasks(state);
-    console.log(state);
+    setTasks([...tasks, state]);
+    console.log(tasks);
   }
   return (
     <>
